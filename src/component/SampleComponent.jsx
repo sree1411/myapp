@@ -1,5 +1,8 @@
 
 
+// created the sample component and nested component
+// be remember component name should be in the capital letter and
+// when you call the nested component you have to mention like <Abc/>
 
 const Abc = ()=>{
     return(
