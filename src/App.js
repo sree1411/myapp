@@ -8,11 +8,21 @@ function App() {
   
    const name= "sree"
    const age =22
-   const user ={
+   const user =[{
     firstname:"sree",
     lastname:"virat",
     email:"sree@gmail.com"
-   }
+   },
+   {
+    firstname:"renati",
+    lastname:"kohli",
+    email:"sree@gmail.com"
+   },
+   {
+    firstname:"sreekanth",
+    lastname:"vK",
+    email:"sree@gmail.com"
+   }]
 
   return (
     <div className="App">
