@@ -29,6 +29,8 @@ function App() {
         <SampleComponent name={name}/>
         <TestComponent age={age}/>
         <UserComponent user={user}/>
+
+         {user[0].firstname}  // index value ni  base chesukoni tisukoni vachedi
     </div>
   );
 }
