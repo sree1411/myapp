@@ -13,10 +13,17 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
+      // body: JSON.stringify(data) not required the body to call the get method
     })
-    const data = await response.json()
-    setDetails(data)
+
+
+    if(response.ok){
+      const data = await response.json();
+      setDetails(data)
+    }else {
+      console.error("Failed to fetch data");
+    }
+    
 
 
 
