@@ -6,9 +6,27 @@ function App() {
   const [details, setDetails] = useState([]);
 
   const apiHandler = async()=>{
-     const response = await fetch("https://fakestoreapi.com/products")
-     const data = await response.json()
-     setDetails(data)
+    try{
+      const response = await fetch("https://fakestoreapi.com/products", {
+        method:"GET",
+        headers:{
+          "Content-Type": "application/json",
+        },
+        // body: JSON.stringify() not required for the get method
+      })
+  
+      if(response.ok){
+        const data = await response.json()
+        setDetails(data)
+      }else{
+        console.log("error")
+      }
+
+     
+    }catch(error){
+      console.log(error)
+    }
+     
   }
   
 
