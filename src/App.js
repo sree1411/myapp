@@ -1,11 +1,19 @@
 
 import './App.css';
+import HeroBanner from './components/HeroBanner';
+import Navbar from './components/Navbar';
+import SideBanner from './components/SideBanner';
  
 
 function App() {
   return (
     <div className="App">
-       <h1> redux tool kit </h1>
+       
+       <Navbar/>
+      <div className="appSection">
+           <HeroBanner/>
+           <SideBanner/>
+      </div>
        
     </div>
   );
