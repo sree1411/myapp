@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import axios from "axios";
  
 
 function App() {
@@ -13,7 +12,8 @@ function App() {
       method:"GET",
       headers: {
         "Content-Type": "application/json",
-      }
+      },
+      body: JSON.stringify(data)
     })
     const data = await response.json()
     setDetails(data)
