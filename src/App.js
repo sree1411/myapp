@@ -5,39 +5,16 @@ import "./App.css";
 function App() {
   const [details, setDetails] = useState([]);
 
- 
- const apiHanlder = async ()=>{
-   try {
-    const response = await fetch("https://fakestoreapi.com/products", {
-      method:"GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // body: JSON.stringify(data) not required the body to call the get method
-    })
-
-
-    if(response.ok){
-      const data = await response.json();
-      setDetails(data)
-    }else {
-      console.error("Failed to fetch data");
-    }
-    
-
-
-
-
-
-   } catch (error) {
-      console.log(error)
-   }
- }
+  const apiHandler = async()=>{
+     const response = await fetch("https://fakestoreapi.com/products")
+     const data = await response.json()
+     setDetails(data)
+  }
   
- useEffect(()=>{
-  apiHanlder()
- }, [])
 
+  useEffect(()=>{
+    apiHandler()
+  },[])
 
 
   return (
