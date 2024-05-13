@@ -18,9 +18,13 @@ const MobileProduct = () => {
                                 <img src={product.image} alt={product.title} />
                             </Link>
                             <p>{product.title}</p>
+                            <Link to={`/product/${product.id}`}>
+                            <p className='ppp'>click here</p>
+                            </Link>
                         </div>
                     ))}
                 </div>
+                
             </div>
         </>
     );

@@ -9,6 +9,7 @@ const CartPage = () => {
   const product = useSelector((state)=>state.product.value)
   const total = useSelector((state)=>state.product.total)
   
+  
   const incBtn =()=>{
     setCount(count + 1)
   }
@@ -63,7 +64,7 @@ const CartPage = () => {
           }
           </div>
           <div className='shippingcart'>
-              <h1> Total amount :{total *count}</h1>
+              <h1> Total amount :{total}</h1>
               <button className='btncheckout' onClick={abc}> check Out </button>
           </div>
           </div>
