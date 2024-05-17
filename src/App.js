@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
 
@@ -7,10 +8,13 @@ function App() {
 
   const [students, setStudents] = useState([])
 
+     useEffect(()=>{
+      fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res)=>res.json())
+      .then((data)=>setStudents(data)).catch((error)=>console.log(error.message))
+     }, []) 
 
-    fetch("https://jsonplaceholder.typicode.com/users")
-    .then((res)=>res.json())
-    .then((data)=>setStudents(data)).catch((error)=>console.log(error.message))
+
 
 
 
